@@ -1,29 +1,4 @@
-@charset "UTF-8";
 
-/* Fontes baixadas do google */
-@font-face {
-    font-family: 'FonteLogo';
-    src: url("../_fonts/bubblegum-sans-regular.otf");
-}
-
-/* Paleta de cores */
-:root {
-    --cor0: #ffffff;
-    --cor1: #dddddd;
-    --cor2: #606060;
-    --cor3: #cecece;
-    --cor4: #888888;
-    --cor5: #ba80d3;
-    --cor6: #77458C;
-    --cor7: #2F1640;
-    --cor8: #000000;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--cor7);
-    color: rgba(0, 0, 0, 1);
-}
 
 div#interface {
     width: 900px;
