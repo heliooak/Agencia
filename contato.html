@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contato</title>
+        <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="_css/form.css">
+        <script language="javascript" src="_javascript/funcoes.js"></script>
+        <script>
+            function calc_total() {
+                var qtd = parseInt(document.getElementById('cQtd').value);
+                tot = qtd * 4000;
+                document.getElementById('cTot').value = tot;
+            }
+        </script>
+
+    </head>
+    <script language="javascript" src="_javascript/funcoes.js"></script>
+    <body>
+        <div id="interface"> 
+            <header id="cabecalho">
+                <hgroup>
+                    <h1>Explorer agências</h1>
+                    <h2>Agência de viagens</h2>
+                </hgroup>
+                    <img id="icone" src="_imagens/contato.png">
+                <nav id="menu">
+                    <h1>Menu Principal</h1>
+                    <ul>
+                        <li onmouseover="mudaFoto('_imagens/aviao01.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+                        <li onmouseover="mudaFoto('_imagens/globo01.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="destinos.html">Destinos</a></li>
+                        <li onmouseover="mudaFoto('_imagens/promo.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="promocao.html">Promoções</a></li>
+                        <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section id="corpo-full">
+                <article id="noticia-principal">
+                    <header id="cabecalho-artigo">
+                        <hgroup>
+                            <h3>Fale Conosco > Contato</h3>
+                            <h1>Cadastro</h1>
+                        </hgroup>
+                    </header>
+
+                    <form method="post" id="fContato" action="mailto:contato@blabla.com" oninput="calc_total()">
+                        <fieldset id="usuario">
+                            <legend>Usuário</legend>
+                                <p><label for="cNome">Nome: </label><input type="text" name="tNome" id="cNome" size="30" maxlength="30" placeholder="Nome Completo"></p>
+                                <p><label for="cSenha">Senha: </label><input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"></p>
+                                <p>E-mail: <input type="email" name="tMail" id="cMail" size="30" maxlength="30" placeholder="e-mail"></p>
+                                <fieldset id="sexo"><legend>Sexo</legend>
+                                        <input type="radio" name="tSexo" id="cMasc" checked><label for="cMasc">Masculino</label></input><br>
+                                        <input type="radio" name="tSexo" id="cFem"><label for="cFem">Feminino</label></input>
+                                </fieldset>
+                                <p>Data de Nascimento: <input type="date" name="tNasc" id="cNasc"></p>
+                        </fieldset>
+                        <fieldset id="endereco">
+                            <legend>Destino Desejado</legend>
+                                <p><label for="cPais">País:</label>
+                                <select name="tPais" id="cPais">
+                                    <optgroup label="Mundo">
+                                        <option value="CAN">Canadá</option>
+                                        <option value="EGT" selected>Egito</option>
+                                        <option value="EUA">EUA</option>
+                                        <option value="TZA">Tanzania</option>
+                                    </optgroup>
+                                </select></p>
+                                <p><label for="cCid">Cidade:</label>
+                                <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"></p>
+                                <datalist id="cidades">
+                                    <option value="Toronto"></option>
+                                    <option value="Cairo"></option>
+                                    <option value="Nova Yorque"></option>
+                                    <option value="Kilimanjaro"></option>
+                                </datalist>
+                        </fieldset>
+                        <fieldset id="pedido">
+                            <legend>Compra</legend>
+                                <p><input type="checkbox" name="tPed" id="cPed" checked>
+                                    <label for="cPed">Gostaria de adquirir as passagens</label></p>
+                                <p><label for="cQtd">Quantidade:</label>
+                                <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"></p>
+                                <p><label for="cTot">Preço Total: R$</label>
+                                <input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly></p>
+                        </fieldset>
+                        <input type="image" name="tEnviar" id="cEnviar" src="_imagens/botao-enviar.png">
+                    </form>
+                </article>
+            </section>
+
+<footer id="rodape">
+    <p>
+        <a href="" target="_blank">Facebook</a> | <a href="" target="_blank">Twitter</a> | <a href="" target="_blank">Instagram</a> | &copy;&trade;Hélio Carvalho
+    </p>
+</footer>
+</div>
+</body>
+</html>
