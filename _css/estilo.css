@@ -155,7 +155,8 @@ nav#menu a:hover {
 
 section#corpo {
     display: block;
-    width: 496px;
+    width: auto;
+    max-width: 496px;
     float: left;
     border-right: 1px solid var(--cor2);
     padding-right: 8px;
