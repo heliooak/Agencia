@@ -26,7 +26,6 @@ body {
 }
 
 div#interface {
-    min-width: 280px;
     max-width: 900px;
     margin: auto;
     background-color: var(--cor0);
@@ -153,13 +152,27 @@ nav#menu a:hover {
     text-decoration: none;
 }
 
+/* section corpo do lado esquerdo na página Promoções */
+
 section#corpo {
     display: block;
-    width: auto;
-    max-width: 496px;
+    width: 100%;
+    max-width: 495px;
     float: left;
     border-right: 1px solid var(--cor2);
     padding-right: 8px;
+}
+
+@media screen and (max-width:900px) {
+    section#corpo {
+        max-width: 900px;
+    }
+    aside#lateral {
+        max-width: 900px;
+        float: left;
+        margin-top: 0px;
+        margin-left: -10px;
+    } 
 }
 
 article#noticia-principal h2 {
@@ -231,15 +244,16 @@ table#tabelaspec caption span {
 
 aside#lateral {
     display: block;
-    width: 375px;
-    float: right;
+    width: 100%;
+    max-width: 375px;
+    float: left;
     background-color: var(--cor0);
-    padding: 10px;
-    margin-top: 0px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, .1);
+    padding-bottom: 10px;
 }
 
 aside#lateral h2 {
+    width: 100%;
+    margin-left: 10px;
     background-image: linear-gradient(to right, var(--cor5), transparent);
     font-size: 12pt;
     color: var(--cor0);
@@ -248,8 +262,8 @@ aside#lateral h2 {
 }
 
 div.video {
-    margin: 0px -20px -20px -20px;
-    padding: 5px;
+    margin: 0px -20px -20px 5px;
+    padding: 10px;
     padding-bottom: 59%;
     position: relative;
 }
@@ -263,6 +277,7 @@ div.video > iframe {
     margin-bottom: 0px;
     border-radius: 5px;
 }
+
 
 footer#rodape {
     clear: both;
