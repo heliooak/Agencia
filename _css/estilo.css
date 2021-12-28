@@ -152,6 +152,31 @@ nav#menu a:hover {
     text-decoration: none;
 }
 
+/* Header da página cadastro */
+
+header#cad{
+    float: right;
+    display: block;
+    max-width:280px;
+}
+
+header#cad a {
+    display: inline-block;
+    background-color: var(--cor1);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    transition-duration: .5s;
+}
+
+header#cad a:hover {
+    color: var(--cor0);
+    text-decoration: none;
+    background-color: var(--cor2); 
+}
+
 /* section corpo do lado esquerdo na página Promoções */
 
 section#corpo {
